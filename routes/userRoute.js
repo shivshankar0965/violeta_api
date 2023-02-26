@@ -24,7 +24,7 @@ router.route("/logout").get(logout);
 router.route("/me").get(isAuthenticateUser, getUserDetails);
 router.route("/me/update").put(updateProfile);
 router.route("/password/update").put(updatePassword);
-router.route("/admin/users").get(isAuthenticateUser, getAllUser);
+router.route("/admin/users").get(getAllUser);
 router
   .route("/admin/user/:id")
   .get(getSingleUser)
